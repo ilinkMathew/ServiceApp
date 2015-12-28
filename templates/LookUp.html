@@ -1,0 +1,106 @@
+<h1>Look me up!!</h1>
+<br>
+
+<div class ="container"  ng-controller="lookupController">
+<div class ="row">
+<div class = "col-xs-12">
+    
+    <form class="form-inline" role="search" >
+  <div class="form-group"  >
+    <input type="text" class="form-control" ng-model="cmpNumber" id="searchBar" placeholder="Search"  ng-required="boolean">
+ </div> 
+  <button type="submit"   class="btn btn-default" ng-click= "searchComplaint(cmpNumber)" >Search</button>
+ <button type="button"   class="btn btn-default" ng-click= "clearSearch()" >Clear</button>
+      
+    
+    </form>
+    
+    </div>    
+    
+    </div>
+    <br>
+    <br>
+    <div class ="container" ng-show="panelPreview">
+    <div class ="row">
+     <div class ="col-xs-6">
+    
+    <div class="panel panel-default" id ="Status">
+  <div class="panel-heading">
+    <h3 class="panel-title">Status</h3>
+  </div>
+  <div class="panel-body">
+    {{Status}}
+  </div>
+            </div>
+    
+    </div>
+    
+    </div>
+    <div class = "row">
+   <div class ="col-xs-2" id ="compInfo">
+    
+        <div class="panel panel-default" >
+  <div class="panel-heading">
+    <h3 class="panel-title">Complaint info</h3>
+  </div>
+  <div class="panel-body">
+    {{CompliantInfo.ProdName}}<br>
+      
+    {{ CompliantInfo.ProdDes }}
+  </div>
+</div>
+    </div>
+
+        <div class ="col-xs-8">
+    
+  <div class="panel panel-default" id ="resinfo">
+  <div class="panel-heading">
+    <h3 class="panel-title">Resolution</h3>
+  </div>
+  <div class="panel-body">
+   <p> Below spare Parts were changed</p>
+  </div>
+  <table class ="table table-hover">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Spare Name</th>
+        <th>Price</th>  
+          </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <th>1</th>
+          <th>{{Resolution[0].spare}} </th>
+          <th>{{Resolution[0].price}}</th>
+          </tr>
+            <tr>
+          <th>2</th>
+          <th>{{Resolution[1].spare}} </th>
+          <th>{{Resolution[1].price}}</th>
+          </tr>
+          <tr>
+          <th></th>
+              <th>Total</th>
+            <th>{{Resolution[0].price+Resolution[1].price}} </th>  
+          </tr>
+      </tbody>
+      
+      </table>          
+            
+            
+            </div>
+            
+    </div>
+    
+        </div>
+
+
+
+</div>
+    <div class="alert alert-danger fade in" ng-show="alertPreview">
+        <strong> Oh snap!</strong> Couldn't find your compliant!
+  </div>
+
+
+</div>

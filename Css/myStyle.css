@@ -1,0 +1,85 @@
+#myNav{
+    position:relative;
+    right:180px;
+         
+}
+
+body{
+    background-image: url(/images/fix3.jpg);
+    background-size: cover;
+}
+.form-control{
+    width: 75%;
+} 
+
+.LivePreview{
+    background-color: white;
+    border-width:  2px;
+    border-style: ridge;
+    border-color: black;
+}
+
+#myHeader{
+  text-align: center;
+}
+#searchBar{
+    width: 100%;
+}
+#Status{
+      margin-left: 70%;
+     background-color: green;
+     text-decoration-color: white;
+}
+#resinfo{
+    margin-left:70%;
+    
+}
+.alert-danger{
+    width: 25%;
+}
+#updateContainer{
+    background-color: coral;
+    margin-top: 2%;
+    padding: 5px;
+
+    
+
+}
+#statusRow{
+    margin-left: 10%;
+    align-content: center;
+ background-color: white;
+    margin-right:20%;
+    padding: 5px;
+}
+#InfoCol{
+    padding:5px;
+}
+#addSpare{
+    margin-left: 10%;
+    align-content: center;
+ background-color: orange;
+    margin-right:20%;
+    padding: 5px;
+}
+#spareInfo{
+    background-color: white;
+    padding: 5px;
+}
+.total{
+ text-align: right;   
+}
+#FixButtonContainer{
+        margin-left: 10%;
+    align-content: center;
+ background-color: skyblue;
+    margin-right:20%;
+    padding: 5px;
+}
+#FixButton {
+float:right;
+}
+#CompliantNumber{
+    float:right;
+}
+

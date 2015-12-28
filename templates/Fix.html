@@ -1,0 +1,126 @@
+<!-- Fix html -->
+<div>
+<h1>fix me!!</h1>
+</div>
+<div class="container" ng-controller="fixController">
+
+<div class = "container">
+    <div class = "row">
+    <div class = "col-xs-12">
+        <form class ="form-inline" role="search">
+          <div class="form-group"  >
+    <input type="text" class="form-control" ng-model="cmpNumber" id="searchBar" placeholder="Search"  ng-required="boolean">
+ </div>
+ <button type="submit"   class="btn btn-default"  >Search</button>
+ <button type="button"   class="btn btn-default"  >Clear</button>
+ </form>
+</div>
+
+    </div>
+    </div>
+    
+<div class = "container" id ="updateContainer">    
+ <div class="row">   
+    <!-- status row-->
+<div class ="row" id="statusRow">
+    <div class ="col-xs-12" id="InfoCol" >
+    
+ <form class ="form-inline">
+     <div class="form-group">
+    <label for="Sel"> Status:</label>
+          <select class="form-control" id="sel1">
+        <option>Unresolved</option>
+        <option>Fixed</option>
+        <option>On Hold</option>
+        
+      </select>
+         
+  </div>   
+ <div class="form-group" id="CompliantNumber">
+    <label for="Name"> Compliant Number:</label>
+    <input type="text" class="form-control" id="name" readonly  value ="{{complaintNumber}}">
+  </div>   
+            
+        </form>   
+    
+    
+    </div>
+        
+    </div>    
+    
+
+    <!-- status row-->
+<div class ="row" id="addSpare">
+    <div class ="col-xs-6">
+     <form class ="form">
+     <div class="form-group">
+    <label for="Name"> Spare:</label>
+    <input type="text" class="form-control" ng-model="spare" >
+  </div>   
+ <div class="form-group">
+    <label for="Name"> Price:</label>
+    <input type="text" class="form-control" ng-model="price" >
+  </div>   
+  
+       <button type="button" class="btn btn-success" ng-click = "addSpare(spare,price)">Add</button> 
+        </form>
+    
+    
+    
+    </div>
+      <div class ="col-xs-6" id="spareInfo" ng-show="spareInfoView">
+     <h4>
+          spare info
+          </h4>
+    
+          <table class = "table table-hover">
+          <thead>
+              <tr>
+                <th>#</th>
+                <th>Spare</th>
+                <th>Price</th>  
+              </tr>
+              </thead>
+              <tbody >
+               <tr ng-repeat = "spare in spares">
+                   <th> {{ $index + 1 }}</th>
+                  <th>{{spare.Spare}}</th>
+                   <th>{{spare.Price}}</th>
+                  </tr>
+              </tbody>
+        
+        </table>
+        <hr>  
+        <div>
+            <h6 class ="total"
+                >Total <span>{{total}}</span> </h6>
+          <button type="button" class="btn btn-danger" ng-click="removeSpare()">Remove</button>
+          
+            
+              
+            
+          
+          </div>
+    </div>  
+    
+    
+    </div>    
+
+
+    <!-- status row-->
+<div class ="row" id="FixButtonContainer">
+    <div class ="col-xs-12" >
+    
+    <button type="Submit" class="btn btn-success" id="FixButton">Fix Me</button>
+    
+    
+    </div>
+        
+    </div>    
+    
+    
+    
+        
+</div>    
+</div>
+    </div>
