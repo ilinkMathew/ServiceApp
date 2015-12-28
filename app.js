@@ -68,16 +68,21 @@ var myServiceApp = angular.module("myServiceApp",['ngRoute'])
 .controller('fixController',['$scope',function($scope){
    console.log("fix controller!");
  var cmp = 1 // dummy value 
- 
-    $scope.complaintNumber = 1;   
- 
-    
-    $scope.spares = [];
+  $scope.fixPanelView = false; 
+   if ($scope.complaintNumber === 1) {
+        $scope.spares = [];
 $scope.total = 0;    
-if($scope.spares.length === 0)
+$scope.fixPanelView = true; 
+       if($scope.spares.length === 0)
     $scope.spareInfoView = false;
     else
         $scope.spareInfoView = true;
+   
+   }else
+       {
+           console.log("Not found!");
+       }
+   
 
 $scope.addSpare = function(spare,price){
     console.log("add Spare function!!!");
